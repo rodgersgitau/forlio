@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./button": "./src/button.tsx",
-    "./card": "./src/card.tsx",
-    "./code": "./src/code.tsx"
+    "./components": "./src/components/index.tsx",
+    "./styles": "./dist/styles.css"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
@@ -15,12 +14,28 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@turbo/gen": "^1.11.3",
-    "@types/node": "^20.10.6",
     "@types/eslint": "^8.56.1",
+    "@types/node": "^20.10.6",
     "@types/react": "^18.2.46",
     "@types/react-dom": "^18.2.18",
+    "autoprefixer": "^10.4.17",
     "eslint": "^8.56.0",
+    "react-aria": "^3.31.1",
+    "react-aria-components": "^1.0.1",
+    "tailwind-merge": "^2.2.1",
+    "tailwind-variants": "^0.1.20",
+    "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-react-aria-components": "^1.0.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12"
+  },
+  "dependencies": {
+    "lucide-react": "^0.315.0",
     "react": "^18.2.0",
-    "typescript": "^5.3.3"
+    "react-dom": "^18.2.0"
+  },
+  "resolutions": {
+    "jackspeak": "2.1.1"
   }
 }
