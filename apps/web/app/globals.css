@@ -1,50 +1,59 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
+@layer base {
+  :root {
+    --background: 340 33% 98%;
+    --foreground: 347 27% 6%;
+    --card: 340 33% 98%;
+    --card-foreground: 347 27% 6%;
+    --popover: 340 33% 98%;
+    --popover-foreground: 347 27% 6%;
+    --primary: 342 41% 52%;
+    --primary-foreground: 340 33% 98%;
+    --secondary: 344 84% 73%;
+    --secondary-foreground: 347 27% 6%;
+    --muted: 341 33% 20%;
+    --muted-foreground: 347 27% 70%;
+    --accent: 59 30% 62%;
+    --accent-foreground: 347 27% 6%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 347 27% 6%;
+    --border: 341 33% 20%;
+    --input: 341 33% 20%;
+    --ring: 59 30% 40%;
+    --radius: 0.5rem;
+  }
 
-  --callout-rgb: 20, 20, 20;
-  --callout-border-rgb: 108, 108, 108;
-  --card-rgb: 100, 100, 100;
-  --card-border-rgb: 200, 200, 200;
-
-  --glow-conic: conic-gradient(
-    from 180deg at 50% 50%,
-    #2a8af6 0deg,
-    #a853ba 180deg,
-    #e92a67 360deg
-  );
+  .dark {
+    --background: 330 40% 2%;
+    --foreground: 353 27% 94%;
+    --card: 330 40% 2%;
+    --card-foreground: 353 27% 94%;
+    --popover: 330 40% 2%;
+    --popover-foreground: 353 27% 94%;
+    --primary: 342 41% 48%;
+    --primary-foreground: 353 27% 94%;
+    --secondary: 344 84% 27%;
+    --secondary-foreground: 353 27% 94%;
+    --muted: 330 39% 80%;
+    --muted-foreground: 353 27% 94%;
+    --accent: 59 30% 38%;
+    --accent-foreground: 330 40% 2%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 355 25% 10%;
+    --border: 330 40% 60%;
+    --input: 330 39% 80%;
+    --ring: 59 30% 60%;
+  }
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
